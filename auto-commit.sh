@@ -1,21 +1,20 @@
 #!/bin/bash
 
-<<<<<<< HEAD
+echo "🚀 Running Auto Commit..."
+
 # Get current date
 DATE=$(date +"%d %b %Y")
+
+# Pull latest changes (VERY IMPORTANT)
+git pull origin main --rebase
 
 # Add all changes
 git add .
 
-# Commit with dynamic message
-git commit -m "Auto: Daily progress update - $DATE"
+# Commit only if there are changes
+git commit -m "Auto: Daily update - $DATE" || echo "No changes to commit"
 
 # Push to GitHub
 git push origin main
-=======
-DATE=$(date +"%d %b %Y")
 
-git add .
-git commit -m "Auto: Daily update - $DATE"
-git push origin main
->>>>>>> 30e1a41 (Auto: Daily update - 18 Apr 2026)
+echo "✅ Done!"

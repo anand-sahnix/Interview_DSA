@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 
-with open("dashboard/data.json") as f:
+with open("README.md", "w", encoding="utf-8") as f:
     data = json.load(f)
 
 readme = f"""
